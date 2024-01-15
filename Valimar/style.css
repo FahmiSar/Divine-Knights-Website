@@ -1,0 +1,41 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    background-image: url("../background.png");
+
+    background-size: cover;
+    background-position: 80% 90%;
+}
+
+.container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;  
+    margin: 60px auto;
+    width: 84%;
+    overflow: hidden;
+    position: relative;
+  }
+
+.container img{
+    width: 200px;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.container .description{
+    font-size: large;
+    line-height: 2;
+    
+}
+
+.container .return{
+    font-size: large;
+    position: relative;
+    top: 100px;
+}

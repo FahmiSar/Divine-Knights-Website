@@ -29,7 +29,14 @@ body{
 .main-container img{
     max-height: 200px;
     width: 15%;
+    opacity: 0.8;
 }
+
+.main-container img:hover{
+    opacity: 1;
+}
+
+
 
 /*
 based on my understanding .main-container .title-text b

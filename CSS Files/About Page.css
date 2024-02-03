@@ -38,3 +38,44 @@ body{
     font-size: xx-large;
     margin-bottom: 2%;
 }
+
+/*
+content-box > .lianne-container > .lianne-images > img
+                                > .lianne-text
+this is the family tree
+It's set up so that lianne-container takes 100% of the space that content-box has 
+lianne-container is basically another box inside content-box
+
+content-box looks way bigger than it actually is that's because of the padding and margin
+this explains why content-box wont take the entire screen when setting it's width to 100%
+
+lianne-container is then split into two with lianne-text and lianne-images 
+lianne-images is split in two to share space between the two images
+
+The problem is that trying to size the pictures inside of the lianne-images div is ridicuously
+annoying. Like setting the width of the pictures to 100% does not make much of a difference 
+*/
+
+.lianne-container{
+    width: 100%;
+    display: flex;
+}
+
+.lianne-images{
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.lianne-images > img{
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+    min-width: 200px;
+}
+
+
+
+

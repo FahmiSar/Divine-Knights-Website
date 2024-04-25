@@ -11,7 +11,12 @@ body{
     background-image: url("../Pictures/background.png");
 
     background-size: cover;
-    background-position: center 750px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    /*height of the body element will always be the size of the entire viewport*/
+    height: 100vh;
 }
 
 .main-container {
@@ -36,28 +41,15 @@ body{
     opacity: 1;
 }
 
-
-
-/*
-based on my understanding .main-container .title-text b
-means "select the item with b tags that have the class title-text that is the decendent 
-of main-container" 
-
-so if we wanna change stuff about the title-text we gotta do it to the whole thing
-i dunno why it doesnt work if we put all this
-    position: relative;
-    left: 25%;
-    font-size: xx-large;
-in the .main-container .title-text
-
-*/
-.main-container .title-text b{
-    position: relative;
-    left: 25%;
-    font-size: xx-large;
-}
-
 .main-container .title-text{
     margin-bottom: 3%;
+    position: relative;
+    font-weight: bold;
+
+    /*the following code is for responsive design
+    3vw makes the font size equal to 3 times the viewport's width
+    and it positions the text 20% of the displayfrom the left */
+    font-size: 3vw;
+    left: 20%;
 }
 

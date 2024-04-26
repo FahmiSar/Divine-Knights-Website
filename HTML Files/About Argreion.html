@@ -18,8 +18,8 @@
                     <button style = "margin-right: 10px">Awakener</button>
                     <button>Divine Knight</button>
                 </div>
-				<img src="../Pictures/Argreion Action.png" />
-				<img src="../Pictures/Arianrhod.png" />
+				<img src="../Pictures/Argreion Action.png" id="argreion" />
+				<img src="../Pictures/Arianrhod.png" id="arianrhod" style = "display: none;"/>
 			</div>
 
 			<p class="description">
@@ -38,7 +38,33 @@
 		</div>
 
         <script>
-            
+			// Functionality for the buttons
+            const buttons = document.querySelectorAll(".selector-buttons button");
+
+			const awakenerImage = document.getElementById("arianrhod")
+			const divineKnightImage = document.getElementById("argreion")
+
+			function showAwakenerImage(){
+				awakenerImage.style.display = "block";
+				divineKnightImage.style.display = "none";
+			}
+
+			function showDivineKnightImage(){
+				awakenerImage.style.display = "none";
+				divineKnightImage.style.display = "block";
+			}
+			
+			buttons.forEach(button =>{
+				if(button.textContent == "Awakener"){
+					button.addEventListener("click", showAwakenerImage);
+				}
+				else if(button.textContent == "Divine Knight"){
+					button.addEventListener("click", showDivineKnightImage);
+				}
+			});
+
+			localStorage.setItem("vistedArgrion", true);
+
         </script>
 
 	</body>

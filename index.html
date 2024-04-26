@@ -19,20 +19,56 @@
         <img src="Pictures/valimar.jpg" alt="Valimar, The Ashen Knight">
       </a>
 
-      <a href="HTML Files/About Ordine.html">
+      <a href="HTML Files/About Ordine.html" style = "display: none;">
         <img src="Pictures/ordine.jpg" alt="Ordine, The Azure Knight">
       </a>
+
+      <a href="HTML Files/About Testa Rossa.html" style = "display: none;">
+        <img src = "Pictures/Testa Rossa Action.png">
+      </a>
       
-      <a href="HTML Files/About Argreion.html">
+      <a href="HTML Files/About Argreion.html" style = "display: none;">
         <img src="Pictures/Argreion.jpg" alt="Argreion, The Argent Knight">
       </a>
 
-      <a href="">
+      <a href="HTML Files/About El Prado.html" style = "display: none;">
         <img src="Pictures/El Prado.png" alt ="El Prado, The Auric Knight">
       </a>
 
 
     </div>
+
+    <script>
+      window.onload = function(){
+        var hasVisitedValimar = localStorage.getItem("visitedValimar");
+        var hasVisitedOrdine = localStorage.getItem("vistedOrdine");
+        var hasVistedTestaRossa = localStorage.getItem("vistedTestaRossa");
+        var hasVisitedArgrion = localStorage.getItem("vistedArgrion");
+
+        var ordineLink = document.querySelector('a[href = "HTML Files/About Ordine.html"]');
+        var argreionLink = document.querySelector('a[href = "HTML Files/About Argreion.html"]');
+        var testaRossaLink = document.querySelector('a[href = "HTML Files/About Testa Rossa.html"]');
+        var elPradoLink = document.querySelector('a[href = "HTML Files/About El Prado.html"]')
+
+        if(hasVisitedValimar){
+          ordineLink.style.display = 'inline';
+        }
+
+        if(hasVisitedOrdine){
+          testaRossaLink.style.display = "inline";
+        }
+
+        if(hasVistedTestaRossa){
+          argreionLink.style.display = "inline";
+        }
+
+        if(hasVisitedArgrion){
+          elPradoLink.style.display = "inline";
+        }
+
+      }
+
+    </script>
 
   </body>
 </html>

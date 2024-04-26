@@ -10,27 +10,7 @@
     position: relative;
   }
 
-/*
-.content-box img{
-    width: 200px;
-    float: right;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    position: relative;
-    bottom: 30px;
-}
-
-.content-box .description{
-    font-size: large;
-    line-height: 2; 
-}
-
-.content-box h2{
-    font-size: xx-large;
-    margin-bottom: 2%;
-}
-*/
-.content-box img{
+img{
     width: 15vw;
     float: right;
     margin-left: 20px;
@@ -46,6 +26,38 @@
 .content-box .description{
     font-size: 2vw;
     line-height: 2;
+}
+
+.image-box{
+    position: relative;
+    padding: 10px;
+    margin-left: 5px;
+    float: right;
+    width: 25vw;
+}
+
+.image-box .selector-buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.selector-buttons button{
+    z-index: 1;
+    border: none;
+    width: 75px;
+    height: 25px;
+    font-size: 10px;
+    margin-bottom: 5px;
+    color: rgb(87, 87, 87);
+}
+
+.selector-buttons button:hover{
+    color: rgb(0, 0, 0);
+}
+
+.image-box img{
+    width: 100%;
+    margin: 0;
 }
 
 /*There isn't a way to achieve max-font-size so below is a way to achieve that*/
@@ -84,45 +96,6 @@
 
 }
 
-
-
-
-/*
-content-box > .lianne-container > .lianne-images > img
-                                > .lianne-text
-this is the family tree
-It's set up so that lianne-container takes 100% of the space that content-box has 
-lianne-container is basically another box inside content-box
-
-content-box looks way bigger than it actually is that's because of the padding and margin
-this explains why content-box wont take the entire screen when setting it's width to 100%
-
-lianne-container is then split into two with lianne-text and lianne-images 
-lianne-images is split in two to share space between the two images
-
-The problem is that trying to size the pictures inside of the lianne-images div is ridicuously
-annoying. Like setting the width of the pictures to 100% does not make much of a difference 
-*/
-
-.lianne-container{
-    width: 100%;
-    display: flex;
-}
-
-.lianne-images{
-    width: 100%; 
-    display: flex;
-    flex-direction: column;
-}
-
-.lianne-images > img{
-    padding: 0;
-    margin: 0;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    width: 300px;
-    min-width: 200px;
-}
 
 
 

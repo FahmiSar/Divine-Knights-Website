@@ -20,20 +20,27 @@ body{
 }
 
 .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /*aligns text to be center which allows great-one to be center*/
+
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;  
     margin: 60px auto;
     width: 84%;
     overflow: hidden;
-    position: relative;
+}
+
+.main-container .great-one{
+    margin-top: 20px;
 }
 
 .main-container img{
-    max-height: 200px;
-    width: 12%;
+    width: 14%;
     opacity: 0.8;
 }
 
@@ -41,7 +48,7 @@ body{
     opacity: 1;
 }
 
-.main-container .title-text{
+.main-container .title-text p{
     margin-bottom: 3%;
     position: relative;
     font-weight: bold;
@@ -50,6 +57,5 @@ body{
     3vw makes the font size equal to 3 times the viewport's width
     and it positions the text 20% of the displayfrom the left */
     font-size: 3vw;
-    left: 20%;
 }
 

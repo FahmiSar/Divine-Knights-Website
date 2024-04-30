@@ -13,42 +13,67 @@
   <body>
 
     <div class="main-container">
-      <p class="title-text">Click on any Divine Knight to learn more</p>
+      <div class="title-text">
+        <p>Click on any Divine Knight to learn more</p>
+      </div>
 
-      <a href="HTML Files/About Valimar.html">
-        <img src="Pictures/valimar.jpg" alt="Valimar, The Ashen Knight">
-      </a>
+      <div class = "knights">
+        <a href="HTML Files/About Valimar.html">
+          <img src="Pictures/valimar.jpg" alt="Valimar, The Ashen Knight">
+        </a>
+  
+        <a href="HTML Files/About Ordine.html" style = "display: none;">
+          <img src="Pictures/ordine.jpg" alt="Ordine, The Azure Knight">
+        </a>
+  
+        <a href="HTML Files/About Testa Rossa.html" style = "display: none;">
+          <img src = "Pictures/Testa Rossa Homepage.png" alt = "Testa Rossa, The Vermillion Knight">
+        </a>
+  
+        <a href = "HTML Files/About Zector.html" style = "display: none;">
+          <img src="Pictures/Zector Homepage.png" alt = "Zector, The Palatinate Knight">
+        </a>
+        
+        <a href="HTML Files/About Argreion.html" style = "display: none;">
+          <img src="Pictures/Argreion.jpg" alt="Argreion, The Argent Knight">
+        </a>
+  
+        <a href="HTML Files/About Ishmelga.html" style = "display:none;">
+          <img src="Pictures/Ishmelga Homepage.png" alt = "Ishmelga, The Ebon Knight">
+        </a>
+  
+        <a href="HTML Files/About El Prado.html" style = "display: none;">
+          <img src="Pictures/El Prado.png" alt ="El Prado, The Auric Knight">
+        </a>
+      </div>
 
-      <a href="HTML Files/About Ordine.html" style = "display: none;">
-        <img src="Pictures/ordine.jpg" alt="Ordine, The Azure Knight">
-      </a>
-
-      <a href="HTML Files/About Testa Rossa.html" style = "display: none;">
-        <img src = "Pictures/Testa Rossa Action.png">
-      </a>
+      <div class = "great-one" style = "display:none">
+        <a href="HTML Files/Great One.html">
+          <img src = "Pictures/Great One Homepage.png">
+        </a>
+      </div>
       
-      <a href="HTML Files/About Argreion.html" style = "display: none;">
-        <img src="Pictures/Argreion.jpg" alt="Argreion, The Argent Knight">
-      </a>
-
-      <a href="HTML Files/About El Prado.html" style = "display: none;">
-        <img src="Pictures/El Prado.png" alt ="El Prado, The Auric Knight">
-      </a>
-
-
     </div>
-
+    
     <script>
       window.onload = function(){
         var hasVisitedValimar = localStorage.getItem("visitedValimar");
         var hasVisitedOrdine = localStorage.getItem("vistedOrdine");
         var hasVistedTestaRossa = localStorage.getItem("vistedTestaRossa");
+        var hasVisitedZector = localStorage.getItem("visitedZector");
         var hasVisitedArgrion = localStorage.getItem("vistedArgrion");
+        var hasVisitedIshmelga = localStorage.getItem("visitedIshmelga");
+        var hasVisitedElPrado = localStorage.getItem("visitedElPrado");
 
         var ordineLink = document.querySelector('a[href = "HTML Files/About Ordine.html"]');
-        var argreionLink = document.querySelector('a[href = "HTML Files/About Argreion.html"]');
         var testaRossaLink = document.querySelector('a[href = "HTML Files/About Testa Rossa.html"]');
-        var elPradoLink = document.querySelector('a[href = "HTML Files/About El Prado.html"]')
+        var argreionLink = document.querySelector('a[href = "HTML Files/About Argreion.html"]');
+        var zectorLink = document.querySelector('a[href = "HTML Files/About Zector.html"]');
+        var elPradoLink = document.querySelector('a[href = "HTML Files/About El Prado.html"]');
+        var ishmelgaLink = document.querySelector('a[href = "HTML Files/About Ishmelga.html"]');
+        
+        var greatOneDiv = document.querySelector(".great-one");
+
 
         if(hasVisitedValimar){
           ordineLink.style.display = 'inline';
@@ -59,11 +84,23 @@
         }
 
         if(hasVistedTestaRossa){
+          zectorLink.style.display = "inline";
+        }
+
+        if(hasVisitedZector){
           argreionLink.style.display = "inline";
         }
 
         if(hasVisitedArgrion){
+          ishmelgaLink.style.display = "inline";
+        }
+
+        if(hasVisitedIshmelga){
           elPradoLink.style.display = "inline";
+        }
+
+        if(hasVisitedElPrado){
+          greatOneDiv.style.display = "block";
         }
 
       }

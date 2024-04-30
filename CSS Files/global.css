@@ -39,12 +39,23 @@ body{
     margin-top: 20px;
 }
 
-.main-container img{
-    width: 14%;
+.main-container .knights{
+    display: inline;
+    margin: 0; 
+    white-space: nowrap;
+}
+/*the white-space: nowrap prevents the <a> from wrapping i.e forces them all
+to be on one line and inline-block forces <a> to behave like blocks*/
+.main-container a{
+    display: inline-block;
+}
+
+.main-container a img{
+    width: calc(15vw - 4vw);
     opacity: 0.8;
 }
 
-.main-container img:hover{
+.main-container a img:hover{
     opacity: 1;
 }
 

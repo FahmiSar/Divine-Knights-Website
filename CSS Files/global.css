@@ -52,6 +52,7 @@ to be on one line and inline-block forces <a> to behave like blocks*/
 
 .main-container a img{
     width: calc(15vw - 4vw);
+    height: auto;
     opacity: 0.8;
 }
 

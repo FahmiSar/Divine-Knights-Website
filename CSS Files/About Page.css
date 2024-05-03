@@ -1,20 +1,11 @@
-
 .content-box {
     border: 1px solid #ccc;
-    padding: 3%;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;  
-    margin: 3% auto;
+    margin: 60px auto;
     width: 84%;
     overflow: hidden;
-  }
-
-img{
-    width: 15vw;
-    float: right;
-    margin-left: 20px;
-    margin-bottom: 10px;
 }
 
 .content-box h2{
@@ -28,15 +19,23 @@ img{
 }
 
 .image-box{
-    padding: 10px;
     margin-left: 5px;
     float: right;
-    width: 25vw;
 }
 
 .image-box .selector-buttons{
     display: flex;
     justify-content: space-around;
+}
+
+.image-box img{
+    max-height: 200px;
+    max-width: auto;
+    height: 20vw;
+    width: auto;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
 
 .selector-buttons button{
@@ -51,11 +50,6 @@ img{
 
 .selector-buttons button:hover{
     color: rgb(0, 0, 0);
-}
-
-.image-box img{
-    width: 100%;
-    margin: 0;
 }
 
 /*There isn't a way to achieve max-font-size so below is a way to achieve that*/

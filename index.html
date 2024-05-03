@@ -56,7 +56,8 @@
     </div>
     
     <script>
-      window.onload = function(){
+      // FUNCTIONS
+      function updatePageContent(){
         var hasVisitedValimar = localStorage.getItem("visitedValimar");
         var hasVisitedOrdine = localStorage.getItem("vistedOrdine");
         var hasVistedTestaRossa = localStorage.getItem("vistedTestaRossa");
@@ -104,6 +105,20 @@
         }
 
       }
+
+
+      // EVENTS //
+      window.addEventListener("storage", function(event){
+        var keysToCheck = ['visitedValimar', 'visitedOrdine', 'visitedTestaRossa', 'visitedZector', 
+        'visitedArgrion', 'visitedIshmelga', 'visitedElPrado'];
+        
+        if(keysToCheck.includes(event.key)){
+          updatePageContent();
+        }
+      
+      });
+
+      window.onload = updatePageContent;
 
     </script>
 

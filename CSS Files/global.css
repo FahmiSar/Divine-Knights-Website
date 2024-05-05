@@ -19,6 +19,7 @@ body{
     height: 100vh;
 }
 
+/*This is the main text-box and it forces everything to be in columns*/
 .main-container {
     display: flex;
     flex-direction: column;
@@ -40,10 +41,11 @@ body{
 }
 
 .main-container .knights{
-    display: inline;
+    display: inline-block;
     margin: 0; 
     white-space: nowrap;
 }
+
 /*the white-space: nowrap prevents the <a> from wrapping i.e forces them all
 to be on one line and inline-block forces <a> to behave like blocks*/
 .main-container a{
@@ -69,5 +71,20 @@ to be on one line and inline-block forces <a> to behave like blocks*/
     3vw makes the font size equal to 3 times the viewport's width
     and it positions the text 20% of the displayfrom the left */
     font-size: 3vw;
+}
+
+
+@media screen and (max-width: 412px){
+    .main-container .knights{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        
+    }
+
+    .knights.higher{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }
 

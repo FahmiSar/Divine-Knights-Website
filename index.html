@@ -80,7 +80,6 @@
         
         var greatOneDiv = document.querySelector(".great-one");
 
-
         if(hasVisitedValimar){
           ordineLink.style.display = 'inline';
         }
@@ -106,24 +105,17 @@
         }
 
         if(hasVisitedElPrado){
-          greatOneDiv.style.display = "block";
+          greatOneDiv.style.display = "inline";
         }
 
       }
 
 
       // EVENTS //
-      window.addEventListener("storage", function(event){
-        var keysToCheck = ['visitedValimar', 'vistedOrdine', 'vistedTestaRossa', 'visitedZector', 
-        'vistedArgrion', 'visitedIshmelga', 'visitedElPrado'];
-        
-        if(keysToCheck.includes(event.key)){
-          updatePageContent();
-        }
-      
+      // this event will run the moment all DOM content has been loaded
+      document.addEventListener("DOMContentLoaded", function(){
+        updatePageContent();
       });
-
-      window.onload = updatePageContent;
 
     </script>
 
